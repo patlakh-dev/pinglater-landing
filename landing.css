@@ -1086,14 +1086,14 @@ body {
     width: 100%;
     max-width: 100%;
     padding: 0;
+    display: flex;
+    justify-content: center;
   }
   
   .step-visual img {
     max-width: 90%;
     width: auto;
     height: auto;
-    margin: 0 auto;
-    display: block;
   }
   
   .step.tip {
@@ -1105,11 +1105,12 @@ body {
   
   .step.tip .step-visual {
     padding: 0;
+    display: flex;
+    justify-content: center;
   }
   
   .step.tip .step-visual img {
     max-width: 85%;
     width: auto;
-    margin: 0 auto;
   }
 }
