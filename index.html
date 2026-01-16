@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PingLater — Never Lose a Tab Again</title>
+  <meta name="description" content="Snooze browser tabs and get reminded when you need them. Free Chrome extension built by community, for community.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="icons/icon48.png">
+  
+  <link rel="stylesheet" href="landing.css">
+</head>
+<body>
+  <!-- Floating Tabs (Hero Animation) - with real favicons -->
+  <div class="tabs-chaos" id="tabs-chaos">
+    <!-- Top left area -->
+    <div class="floating-tab" style="--delay: 0s; top: 8%; left: 3%; --rotate: -12deg;">
+      <img class="tab-favicon" src="https://www.google.com/s2/favicons?domain=youtube.com&sz=32" alt="">
+      <span>YouTube - Watch Later...</span>
+    </div>
+    <div class="floating-tab" style="--delay: 0.15s; top: 18%; left: 8%; --rotate: 5deg;">
+      <img class="tab-favicon" src="https://www.google.com/s2/favicons?domain=linkedin.com&sz=32" alt="">
+      <span>LinkedIn - New Messages</span>
+    </div>
+    <!-- Top right area -->
+    <div class="floating-tab" style="--delay: 0.1s; top: 10%; right: 5%; --rotate: 8deg;">
+      <img class="tab-favicon" src="https://www.google.com/s2/favicons?domain=medium.com&sz=32" alt="">
+      <span>Medium - Must Read...</span>
+    </div>
+    <div class="floating-tab" style="--delay: 0.25s; top: 22%; right: 3%; --rotate: -6deg;">
+      <img class="tab-favicon" src="https://www.google.com/s2/favicons?domain=twitter.com&sz=32" alt="">
+      <span>Twitter - Trending</span>
+    </div>
+    <!-- Left side -->
+    <div class="floating-tab" style="--delay: 0.2s; top: 42%; left: 2%; --rotate: -6deg;">
+      <img class="tab-favicon" src="https://www.google.com/s2/favicons?domain=amazon.com&sz=32" alt="">
+      <span>Amazon - Cart (3)</span>
+    </div>
+    <!-- Right side -->
+    <div class="floating-tab" style="--delay: 0.3s; top: 38%; right: 2%; --rotate: 15deg;">
+      <img class="tab-favicon" src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/gmail.ico" alt="">
+      <span>Gmail - Important</span>
+    </div>
+    <!-- Bottom left -->
+    <div class="floating-tab" style="--delay: 0.35s; bottom: 25%; left: 5%; --rotate: 12deg;">
+      <img class="tab-favicon" src="https://www.google.com/s2/favicons?domain=store.steampowered.com&sz=32" alt="">
+      <span>Steam - Weekend Sale</span>
+    </div>
+    <div class="floating-tab" style="--delay: 0.4s; bottom: 12%; left: 8%; --rotate: -18deg;">
+      <img class="tab-favicon" src="https://www.google.com/s2/favicons?domain=notion.so&sz=32" alt="">
+      <span>Notion - Project Notes</span>
+    </div>
+    <!-- Bottom right -->
+    <div class="floating-tab" style="--delay: 0.45s; bottom: 22%; right: 4%; --rotate: -5deg;">
+      <img class="tab-favicon" src="https://www.google.com/s2/favicons?domain=docs.google.com&sz=32" alt="">
+      <span>Google Docs - Draft</span>
+    </div>
+    <div class="floating-tab" style="--delay: 0.5s; bottom: 10%; right: 10%; --rotate: 10deg;">
+      <img class="tab-favicon" src="https://www.google.com/s2/favicons?domain=spotify.com&sz=32" alt="">
+      <span>Spotify - Discover</span>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <div class="hero-logo">
+        <img src="icons/icon128.png" alt="PingLater" class="hero-logo-icon">
+      </div>
+      <h1 class="hero-title">
+        <span class="hero-title-main">PingLater</span>
+      </h1>
+      <p class="hero-subtitle">Never lose a tab again</p>
+      <p class="hero-desc">
+        Snooze tabs like emails. They'll come back exactly when you need them.
+      </p>
+      
+      <div class="hero-cta">
+        <a href="#" class="cta-button primary" id="cta-chrome">
+          <svg class="chrome-icon" viewBox="0 0 24 24" fill="currentColor">
+            <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/>
+            <circle cx="12" cy="12" r="4"/>
+          </svg>
+          Add to Chrome — Free
+        </a>
+        <span class="cta-note">No account • No credit card • Just works</span>
+      </div>
+
+      <!-- Creator Note -->
+      <p class="creator-note">
+        I was tired of losing tabs. Tried every solution — none felt right. So I built what I actually want to use. <span>— Patlakh, creator</span>
+      </p>
+
+      <div class="scroll-indicator" id="scroll-indicator">
+        <span>Scroll to explore</span>
+        <div class="scroll-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 5v14M5 12l7 7 7-7"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Demo Section -->
+  <section class="section demo" id="demo">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">See it in action</span>
+        <h2 class="section-title">Clean. Simple. Powerful.</h2>
+      </div>
+
+      <div class="demo-grid">
+        <div class="demo-card">
+          <div class="demo-media">
+            <img src="gifs/main.gif" alt="Quick snooze demo" loading="lazy">
+          </div>
+          <div class="demo-info">
+            <h3>Quick Snooze</h3>
+            <p>Two clicks — tab comes back when you need it</p>
+          </div>
+        </div>
+
+        <div class="demo-card">
+          <div class="demo-media">
+            <img src="gifs/calendar.gif" alt="Custom date and time demo" loading="lazy">
+          </div>
+          <div class="demo-info">
+            <h3>Custom Date & Time</h3>
+            <p>Pick any date and exact time for your reminder</p>
+          </div>
+        </div>
+
+        <div class="demo-card">
+          <div class="demo-media">
+            <img src="gifs/pending.gif" alt="Pending tabs demo" loading="lazy">
+          </div>
+          <div class="demo-info">
+            <h3>Organized Pending</h3>
+            <p>All snoozed tabs in one place, ready to manage</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="section how-it-works" id="how-it-works">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">How it works</span>
+        <h2 class="section-title">Three clicks to freedom</h2>
+      </div>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h3>Open & Pick Time</h3>
+            <p>Click the PingLater icon and choose when you want the tab back.</p>
+          </div>
+          <div class="step-visual">
+            <img src="how-it-works-screenshots/step 1.png" alt="Step 1: Open PingLater and pick time" loading="lazy">
+          </div>
+        </div>
+
+        <div class="step optional">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <span class="step-badge">Optional</span>
+            <h3>Customize</h3>
+            <p>Keep tab open, pick a category, or set up recurring reminders.</p>
+          </div>
+          <div class="step-visual">
+            <img src="how-it-works-screenshots/step 2.png" alt="Step 2: Optional settings" loading="lazy">
+          </div>
+        </div>
+
+        <div class="step optional">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <span class="step-badge">Optional</span>
+            <h3>Add a Note</h3>
+            <p>Leave yourself a reminder why you saved this tab.</p>
+          </div>
+          <div class="step-visual">
+            <img src="how-it-works-screenshots/step 3.png" alt="Step 3: Add a note" loading="lazy">
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <h3>Hit Snooze</h3>
+            <p>One click and your tab is scheduled. Done.</p>
+          </div>
+          <div class="step-visual">
+            <img src="how-it-works-screenshots/step 4.png" alt="Step 4: Hit Snooze" loading="lazy">
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-number">5</div>
+          <div class="step-content">
+            <h3>Get Reminded</h3>
+            <p>Your tab reopens with a notification. Need more time? Reschedule right from the popup.</p>
+          </div>
+          <div class="step-visual">
+            <img src="how-it-works-screenshots/step 5.png" alt="Step 5: Get reminded" loading="lazy">
+          </div>
+        </div>
+
+        <div class="step tip">
+          <div class="step-number">💡</div>
+          <div class="step-content">
+            <span class="step-badge">Pro tip</span>
+            <h3>Right-Click Snooze</h3>
+            <p>Right-click anywhere on a page to quickly snooze without opening the extension.</p>
+          </div>
+          <div class="step-visual">
+            <img src="how-it-works-screenshots/right click.png" alt="Pro tip: Right-click snooze" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="section features" id="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Features</span>
+        <h2 class="section-title">Everything you need.<br>Nothing you don't.</h2>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card has-screenshot">
+          <div class="feature-screenshot">
+            <img src="screenshots/quick snooze.png" alt="Quick Snooze screenshot" loading="lazy">
+          </div>
+          <div class="feature-content">
+            <h3>Quick Snooze</h3>
+            <p>One click to snooze — or save to "Someday" for later. Tab closes or stays open.</p>
+          </div>
+        </div>
+
+        <div class="feature-card has-screenshot">
+          <div class="feature-screenshot">
+            <img src="screenshots/reccuring_reminders.png" alt="Recurring Reminders screenshot" loading="lazy">
+          </div>
+          <div class="feature-content">
+            <h3>Recurring Reminders</h3>
+            <p>Set hourly, daily, weekly, or monthly repeating reminders.</p>
+          </div>
+        </div>
+
+        <div class="feature-card has-screenshot">
+          <div class="feature-screenshot">
+            <img src="screenshots/multi tabs group.png" alt="Multi-Tab Groups screenshot" loading="lazy">
+          </div>
+          <div class="feature-content">
+            <h3>Multi-Tab Groups</h3>
+            <p>Snooze multiple tabs at once. Name your groups for easy organization.</p>
+          </div>
+        </div>
+
+        <div class="feature-card has-screenshot">
+          <div class="feature-screenshot">
+            <img src="how-it-works-screenshots/step 5.png" alt="Smart Reminders notification" loading="lazy">
+          </div>
+          <div class="feature-content">
+            <h3>Smart Reminders</h3>
+            <p>Missed a reminder? No problem. It'll fire when you're back online.</p>
+          </div>
+        </div>
+
+        <div class="feature-card has-screenshot">
+          <div class="feature-screenshot">
+            <img src="screenshots/categories.png" alt="Categories screenshot" loading="lazy">
+          </div>
+          <div class="feature-content">
+            <h3>Categories</h3>
+            <p>Organize with custom categories: Work, Read Later, Shopping — you name it.</p>
+          </div>
+        </div>
+
+        <div class="feature-card has-screenshot">
+          <div class="feature-screenshot">
+            <img src="screenshots/notes.png" alt="Notes screenshot" loading="lazy">
+          </div>
+          <div class="feature-content">
+            <h3>Notes</h3>
+            <p>Add a note to remember why you saved it. Shows up in the notification.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section faq" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">FAQ</span>
+        <h2 class="section-title">Questions? Answers.</h2>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question">
+            Is PingLater really free?
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              Yes! PingLater is completely free with all features included. No hidden limits, no paywalls. My goal is to build a product people genuinely love to use. Down the road, I may explore optional premium features to help cover development time.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Do I need to create an account?
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              Nope! Just install and use. No sign up, no email, no password. Your data stays in your browser.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            What happens if I miss a reminder?
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              If Chrome was closed when a reminder was due, it will fire as soon as you open your browser. You'll never lose a tab.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Does it work offline?
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              Yes! All your data is stored locally. The extension works completely offline — no internet needed.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Is my data private?
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              100% private. Your tabs, notes, and reminders never leave your computer. We don't collect any data, don't have servers, and don't track you.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Will there be a Firefox/Safari version?
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              We're focused on Chrome for now, but Firefox and other browsers are on our radar. Follow us on X for updates!
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Troubleshooting Section -->
+  <section class="section troubleshooting" id="troubleshooting">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Troubleshooting</span>
+        <h2 class="section-title">Notifications not working?</h2>
+      </div>
+
+      <div class="troubleshoot-grid">
+        <div class="troubleshoot-card">
+          <div class="os-header">
+            <div class="os-icon macos">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+              </svg>
+            </div>
+            <h3>macOS</h3>
+          </div>
+          <p class="troubleshoot-desc">Notifications not appearing?</p>
+          <ol class="troubleshoot-steps">
+            <li>Open <strong>System Settings</strong></li>
+            <li>Go to <strong>Notifications</strong></li>
+            <li>Find <strong>Google Chrome</strong> in the list</li>
+            <li>Enable <strong>Allow Notifications</strong></li>
+            <li>Make sure <strong>Focus Mode</strong> is off</li>
+          </ol>
+        </div>
+
+        <div class="troubleshoot-card">
+          <div class="os-header">
+            <div class="os-icon windows">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M3 12V6.75l6-1.5v6.75H3zm7-7.5L21 3v9h-11V4.5zM3 13h6v6.75l-6-1.5V13zm7 0h11v9l-11-1.5V13z"/>
+              </svg>
+            </div>
+            <h3>Windows</h3>
+          </div>
+          <p class="troubleshoot-desc">Notifications not appearing?</p>
+          <ol class="troubleshoot-steps">
+            <li>Open <strong>Settings</strong> (Win + I)</li>
+            <li>Go to <strong>System → Notifications</strong></li>
+            <li>Make sure notifications are <strong>On</strong></li>
+            <li>Scroll down and find <strong>Google Chrome</strong></li>
+            <li>Enable notifications for Chrome</li>
+            <li>Disable <strong>Focus Assist</strong> if active</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="troubleshoot-note">
+        <p>Still having issues? Make sure Chrome is updated to the latest version and try restarting your browser.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA Section -->
+  <section class="section final-cta" id="download">
+    <div class="container">
+      <div class="cta-card">
+        <div class="cta-glow"></div>
+        <div class="cta-content">
+          <h2>Ready to declutter your browser?</h2>
+          <p>Join the community of people who finally have their tabs under control.</p>
+          
+          <a href="#" class="cta-button primary large">
+            <svg class="chrome-icon" viewBox="0 0 24 24" fill="currentColor">
+              <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/>
+              <circle cx="12" cy="12" r="4"/>
+            </svg>
+            Add to Chrome — Free
+          </a>
+          
+          <div class="cta-features">
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> No sign up</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Works offline</span>
+            <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Privacy first</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <img src="icons/icon48.png" alt="PingLater" class="footer-logo">
+          <span>PingLater</span>
+        </div>
+        
+        <p class="footer-tagline">Built by community, for community</p>
+        
+        <div class="footer-links">
+          <a href="guide.html">Guide</a>
+          <a href="privacy.html">Privacy</a>
+          <a href="https://x.com/PingLater_" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+            @PingLater_
+          </a>
+        </div>
+        
+        <p class="footer-copy">Made with ♥ by <a href="https://x.com/meowmiauwmeow" target="_blank">Patlakh</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="landing.js"></script>
+</body>
+</html>
