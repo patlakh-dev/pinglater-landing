@@ -1022,6 +1022,10 @@ body {
    ========================================== */
 
 @media (max-width: 900px) {
+  html, body {
+    overflow-x: hidden;
+  }
+
   .step {
     grid-template-columns: 1fr;
     gap: 24px;
@@ -1037,6 +1041,7 @@ body {
     width: 60px;
     height: 60px;
     font-size: 28px;
+    justify-self: center;
   }
   
   .step-visual {
