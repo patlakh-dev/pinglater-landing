@@ -1046,6 +1046,26 @@ body {
   
   .step-visual {
     order: 3;
+    justify-self: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .step-visual img {
+    max-width: 90%;
+  }
+  
+  .step.tip {
+    padding: 24px 16px;
+  }
+  
+  .step.tip .step-visual {
+    justify-content: center;
+  }
+  
+  .step.tip .step-visual img {
+    max-width: 85%;
   }
 }
 
