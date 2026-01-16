@@ -1076,4 +1076,35 @@ body {
     width: 100%;
     justify-content: center;
   }
+  
+  /* Fix step images overflow on mobile */
+  .step {
+    overflow: hidden;
+  }
+  
+  .step-visual {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 16px;
+  }
+  
+  .step-visual img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+  
+  .step.tip {
+    padding: 24px 16px;
+    overflow: hidden;
+  }
+  
+  .step.tip .step-visual {
+    padding: 0;
+  }
+  
+  .step.tip .step-visual img {
+    max-width: 100%;
+    width: 100%;
+  }
 }
