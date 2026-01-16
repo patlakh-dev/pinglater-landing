@@ -141,16 +141,28 @@ function initScrollAnimations() {
       transition-delay: calc(var(--index, 0) * 0.1s);
     }
     
-    .step.animate-prepare {
-      transform: translateX(-30px);
+    @media (min-width: 901px) {
+      .step.animate-prepare {
+        transform: translateX(-30px);
+      }
+      
+      .step:nth-child(even).animate-prepare {
+        transform: translateX(30px);
+      }
+      
+      .step.animate-in {
+        transform: translateX(0);
+      }
     }
     
-    .step:nth-child(even).animate-prepare {
-      transform: translateX(30px);
-    }
-    
-    .step.animate-in {
-      transform: translateX(0);
+    @media (max-width: 900px) {
+      .step.animate-prepare {
+        transform: translateY(30px);
+      }
+      
+      .step.animate-in {
+        transform: translateY(0);
+      }
     }
   `;
   document.head.appendChild(style);
