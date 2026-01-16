@@ -1085,18 +1085,22 @@ body {
   .step-visual {
     width: 100%;
     max-width: 100%;
-    padding: 0 16px;
+    padding: 0;
   }
   
   .step-visual img {
-    max-width: 100%;
-    width: 100%;
+    max-width: 90%;
+    width: auto;
     height: auto;
+    margin: 0 auto;
+    display: block;
   }
   
   .step.tip {
-    padding: 24px 16px;
+    padding: 20px 12px;
     overflow: hidden;
+    margin-left: -12px;
+    margin-right: -12px;
   }
   
   .step.tip .step-visual {
@@ -1104,7 +1108,8 @@ body {
   }
   
   .step.tip .step-visual img {
-    max-width: 100%;
-    width: 100%;
+    max-width: 85%;
+    width: auto;
+    margin: 0 auto;
   }
 }
