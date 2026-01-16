@@ -1046,14 +1046,14 @@ body {
   
   .step-visual {
     order: 3;
-    justify-self: center;
     width: 100%;
-    display: flex;
-    justify-content: center;
+    text-align: center;
   }
   
   .step-visual img {
     max-width: 90%;
+    display: inline-block;
+    margin: 0 auto;
   }
   
   .step.tip {
@@ -1061,11 +1061,12 @@ body {
   }
   
   .step.tip .step-visual {
-    justify-content: center;
+    text-align: center;
   }
   
   .step.tip .step-visual img {
     max-width: 85%;
+    display: inline-block;
   }
 }
 
